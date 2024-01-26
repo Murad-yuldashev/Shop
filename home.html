@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>77.uz</title>
+    <link rel="icon" type="image/png" href="./Assets/Icon/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -15,6 +16,7 @@
               grays: "#EAEDF0",
               grays_one: "#8E9297",
               black: "#16191D)",
+              grays2: "rgba(214, 214, 214, 0.50)",
             },
             boxShadow: {
               box: "0px 4px 16px 0px rgba(0, 0, 0, 0.02)",
@@ -28,39 +30,56 @@
   <body>
     <!-- Header -->
     <header
-      class="flex justify-between px-32 items-center bg-opacity_white backdrop-blur relative"
+      class="flex justify-between md:px-32 sm:px-14 px-4 items-center bg-opacity_white backdrop-blur relative"
     >
       <div class="flex gap-6 items-center">
         <div class="relative">
           <select
             class="block appearance-none bg-white border border-gray-300 rounded-md py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           >
-            <option>English</option>
+            <option>
+              <span>Русский</span>
+              <img src="./Assets/Icon/language.svg" alt="language" />
+            </option>
             <option>Spanish</option>
             <option>French</option>
           </select>
         </div>
-        <div class="flex gap-1 items-center">
+        <div class="flex gap-1 items-center sm:block hidden">
           <img src="./Assets/Icon/phone.svg" alt="phone" />
           <p class="text-xs">+998 88 500 50 00</p>
         </div>
       </div>
-      <div class="">
-        <img class="py-3.5 px-4" src="./Assets/Icon/logo.png" alt="logo" />
+      <div class="px-8">
+        <img
+          class="py-3.5 px-4 sm:w-full w-[92px]"
+          src="./Assets/Icon/logo.png"
+          alt="logo"
+        />
       </div>
       <div class="">
-        <ul class="flex gap-4">
+        <ul class="flex items-center sm:gap-x-4 gap-x-0">
           <li>
             <a class="flex gap-2" href=""
-              ><img src="./Assets/Icon/heart.svg" alt="heart" />
-              <p>Избранные</p></a
+              ><img
+                class="p-2.5 sm:p-0 bg-gray-200 sm:bg-white rounded-lg"
+                src="./Assets/Icon/heart.svg"
+                alt="heart"
+              />
+              <p class="md:block hidden">Избранные</p></a
             >
           </li>
-          <li><div class="w-px h-8 bg-light_gray"></div></li>
+          <li class="sm:block hidden">
+            <div class="w-px h-8 bg-light_gray"></div>
+          </li>
           <li>
             <a class="flex gap-2 px-6 bg-grays" href="">
-              <p>Войти</p>
-              <img src="./Assets/Icon/login.svg" alt="login" />
+              <p class="md:block hidden">Войти</p>
+              <img
+                class="p-2.5 sm:p-0 bg-gray-200 sm:bg-white rounded-lg"
+                src="./Assets/Icon/login.svg"
+                alt="login"
+              />
             </a>
           </li>
         </ul>
@@ -71,10 +90,10 @@
       <!-- search -->
       <section
         style="background-color: #f0f3f7"
-        class="flex justify-center bg-light_gray relative z-0 pt-10 h-20"
+        class="flex justify-center w-full bg-light_gray relative z-0 pt-10 h-20"
       >
         <form
-          class="bg-white absolute flex justify-between border border-grays p-2 rounded-lg w-[580px]"
+          class="bg-white absolute flex justify-between border border-grays p-2 rounded-lg sm:w-[580px] w-10/12"
         >
           <div class="relative w-full flex items-center gap-2">
             <img class="w-6 h-6" src="./Assets/Icon/search.svg" alt="search" />
@@ -93,7 +112,7 @@
       </section>
 
       <!-- Category -->
-      <section class="flex justify-center mt-[54px]">
+      <section class="flex justify-center mt-[54px] px-4">
         <div class="text-center">
           <div class="">
             <h1 class="text-[32px] font-bold text-black">Категории</h1>
@@ -104,8 +123,8 @@
           <div
             class="mt-10 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-[72px] gap-y-5"
           >
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -121,10 +140,10 @@
               <button>
                 <img src="./Assets/Icon/chevron-right.svg" alt="" />
               </button>
-            </div>
+            </article>
 
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -140,9 +159,10 @@
               <button>
                 <img src="./Assets/Icon/chevron-right.svg" alt="chevron" />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -158,9 +178,10 @@
               <button>
                 <img src="./Assets/Icon/chevron-right.svg" alt="" />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -179,9 +200,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -200,9 +222,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -221,9 +244,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -242,13 +266,14 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
-                  class="shadow-md p-4 rounded-xl border border-grays absolute -left-[18%] bg-white"
+                  class="shadow-md p-4 rounded-xl border border-grays absolute -left-[23%] bg-white"
                   src="./Assets/Icon/decoration.svg"
                   alt="icon"
                 />
@@ -263,9 +288,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -284,9 +310,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -305,9 +332,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -326,9 +354,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -347,9 +376,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -368,9 +398,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -389,9 +420,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -410,9 +442,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -431,9 +464,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -452,9 +486,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -473,13 +508,14 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
-                  class="shadow-md p-4 rounded-xl border border-grays absolute -left-[15%] bg-white"
+                  class="shadow-md p-4 rounded-xl border border-grays absolute -left-[17%] bg-white"
                   src="./Assets/Icon/sneaker.svg"
                   alt="icon"
                 />
@@ -494,9 +530,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between sm:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -515,9 +552,10 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
-            <div
-              class="flex items-center justify-between w-[336px] h-[85px] shadow-box rounded-xl border border-grays p-3"
+            </article>
+
+            <article
+              class="flex items-center justify-between md:ml-0 ml-10 md:w-[336px] w-10/12 h-[85px] shadow-box rounded-xl border border-grays p-3"
             >
               <div class="flex items-center relative pl-11">
                 <img
@@ -536,63 +574,77 @@
                   alt="chevron-right"
                 />
               </button>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- Ads -->
       <section
-        class="mt-9 py-16 bg-gray-200 flex justify-center items-center px-32"
+        class="mt-9 md:py-16 sm:py-12 py-8 bg-gray-200 flex justify-center items-center md:px-32 sm:px-14 px-4"
       >
         <div class="">
           <div class="text-center">
-            <h1 class="text-[32px] font-bold text-black">Объявления</h1>
-            <p class="text-base text-gray-600">
+            <h1 class="sm:text-[32px] text-[28px] font-bold text-black">
+              Объявления
+            </h1>
+            <p class="sm:text-base text-sm text-gray-600">
               Вы можете найти все категории, которые вам нужны от покупателя
             </p>
           </div>
-          <div class="grid grid-cols-4 mt-10 gap-6">
-            <div
-              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+          <div
+            class="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 mt-10 gap-6"
+          >
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
             >
-              <div class="w-full relative">
-                <img
-                  class="absolute top-3 left-3"
-                  src="./Assets/Icon/heart2.svg"
-                  alt="icon"
-                />
-                <img
-                  class="w-full rounded-t-md"
-                  src="./Assets/Img/card1.png"
-                  alt="card"
-                />
-              </div>
-              <div class="p-5">
-                <p
-                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
-                >
-                  г. Ташкент
-                </p>
-                <h3 class="font-semibold text-lg mt-4">
-                  Кепки Corneliani Diamond for him edition.
-                </h3>
-                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
-                <p class="text-gray-600 text-base font-semibold">
-                  +998 71 200 70 07
-                </p>
-                <div class="flex items-center gap-2">
-                  <p class="text-2xl text-black font-bold">2 599 000</p>
-                  <span class="text-blue-500 font-medium">UZS</span>
+              <a href="./product-detail.html" target="_blank">
+                <div class="w-full relative">
+                  <img
+                    class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                    src="./Assets/Icon/heart2.svg"
+                    alt="icon"
+                  />
+                  <img
+                    class="w-full rounded-t-md"
+                    src="./Assets/Img/card1.png"
+                    alt="card"
+                  />
                 </div>
-              </div>
-            </div>
-            <div
-              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+                <div class="md:p-5 p-2">
+                  <p
+                    class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                  >
+                    г. Ташкент
+                  </p>
+                  <h3 class="font-semibold sm:text-lg text-sm sm:mt-4 mt-2">
+                    Кепки Corneliani Diamond for him edition.
+                  </h3>
+                  <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                    Вчера, 19:20
+                  </p>
+                  <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                    +998 71 200 70 07
+                  </p>
+                  <div class="flex items-center gap-2">
+                    <p class="sm:text-2xl text-base text-black font-bold">
+                      2 599 000
+                    </p>
+                    <span class="text-blue-500 sm:text-base text-sm font-medium"
+                      >UZS</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </article>
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
             >
               <div class="w-full relative">
                 <img
-                  class="absolute top-3 left-3"
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
                   src="./Assets/Icon/heart2.svg"
                   alt="icon"
                 />
@@ -602,26 +654,34 @@
                   alt="card"
                 />
               </div>
-              <div class="p-5">
+              <div class="md:p-5 p-2">
                 <p
-                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
                 >
                   г. Самарканд
                 </p>
-                <h3 class="font-semibold text-lg mt-4">
+                <h3 class="font-semibold sm:text-lg text-sm sm:mt-4 mt-2">
                   Chevrolet Onix 1.2 Turbo в наличии
                 </h3>
-                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
-                <p class="text-gray-600 text-base font-semibold">
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
                   +998 71 200 70 07
                 </p>
                 <div class="flex items-center gap-2">
-                  <p class="text-2xl text-black font-bold">204 000 000</p>
-                  <span class="text-blue-500 font-medium">UZS</span>
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    204 000 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -654,8 +714,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -688,8 +750,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -722,8 +786,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -756,8 +822,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -790,8 +858,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -824,8 +894,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -858,8 +930,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -892,8 +966,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -926,8 +1002,10 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
-            <div
+            </article>
+
+            <!-- box -->
+            <article
               class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
             >
               <div class="w-full relative">
@@ -960,10 +1038,73 @@
                   <span class="text-blue-500 font-medium">UZS</span>
                 </div>
               </div>
-            </div>
+            </article>
+          </div>
+
+          <!-- Download -->
+          <div class="flex justify-center items-center w-full mt-10">
+            <button
+              class="flex items-center gap-2 py-3 px-7 text-base font-semibold rounded-[100px] border-2 border-gray-500 bg-gray-300"
+            >
+              Загрузить больше
+              <img src="./Assets/Icon/chevron-double-down.svg" alt="chevron" />
+            </button>
+          </div>
+          <div class="flex justify-center relative mt-3">
+            <img
+              class="absolute -bottom-24"
+              src="./Assets/Icon/logo.png"
+              alt="logo"
+            />
           </div>
         </div>
       </section>
     </main>
+
+    <!-- footer  -->
+    <footer class="w-full flex flex-col justify-center items-center px-4">
+      <div class="border-b border-gray-300 w-full">
+        <div
+          class="bg-[url('./Assets/Img/background.svg')] bg-cover bg-center flex justify-center flex-col items-center text-center"
+        >
+          <p class="mt-[63px] sm:text-base text-sm sm:w-7/12 w-11/12">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <div
+            class="mt-6 flex justify-center flex-wrap gap-x-14 gap-y-4 pb-10 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-1">
+              <img src="./Assets/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Доска объявлений</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="./Assets/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Условия пользования</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="./Assets/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">+998 88 500 50 00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between sm:px-32 px-4 w-full py-2">
+        <div class="flex items-center gap-2.5">
+          <a href="#!">© 77.uz</a>
+          <p>2023. Все права защищены</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./Assets/Icon/uic.svg" alt="uic" />
+          <img
+            class="sm:block hidden"
+            src="./Assets/Icon/group.svg"
+            alt="group"
+          />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
